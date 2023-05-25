@@ -1,8 +1,8 @@
 import requests
 from urllib.parse import urljoin
-from engine4.constants import ENDPOINTS
-from engine4.exceptions import HttpResponseException
-from engine4.utils import create_authorization_header
+from src.constants import ENDPOINTS
+from src.exceptions import HttpResponseException
+from src.utils import create_authorization_header
 
 
 

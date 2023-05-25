@@ -19,8 +19,8 @@ setup(
     author_email="mail@robingenz.dev",
     license="MIT",
     python_requires='>=3.6',
-    packages=["engine4"],
-    include_package_data=True,
+    packages=['engine4'],
+    package_dir = {'engine4': 'src'},
     install_requires=["requests"],
     classifiers=[
         'Programming Language :: Python',
@@ -28,5 +28,6 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
     ]
 )
