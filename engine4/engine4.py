@@ -1,6 +1,7 @@
 import requests
 from urllib.parse import urljoin
 from engine4.constants import ENDPOINTS
+from engine4.exceptions import HttpResponseException
 from engine4.utils import create_authorization_header
 
 
@@ -30,16 +31,23 @@ class ENGINE4:
             password: str,
             client_id: str,
     ) -> AuthenticateResult:
+        headers = {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        }
         data = {
             'grant_type': 'password',
             'username': username,
             'password': password,
             'client_id': client_id,
         }
-        response = requests.post(
-            urljoin(self.base_url, ENDPOINTS.TOKEN), data=data)
+        method = 'POST'
+        url = urljoin(self.base_url, ENDPOINTS.TOKEN)
+        response = requests.request(method, url, data=data, headers=headers)
+        if not response.ok:
+            raise HttpResponseException(response.status_code, response.reason, response.json())
         response_json = response.json()
         return AuthenticateResult(response_json['access_token'], response_json['expires_in'], response_json['token_type'], response_json['refresh_token'], response_json['scope'])
+
 
     def fetch(
             self,
