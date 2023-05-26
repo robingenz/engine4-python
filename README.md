@@ -4,6 +4,8 @@
 
 ## Installation
 
+Use [pip](https://pypi.org/project/pip/) to install the package:
+
 ```
 pip3 install engine4
 ```
