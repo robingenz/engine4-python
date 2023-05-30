@@ -11,7 +11,7 @@ setup(
     long_description=README,
     long_description_content_type="text/markdown",
     project_urls={
-        'Documentation': 'docs.engine4.io/api',
+        'Documentation': 'https://docs.engine4.io/api',
         'Github': 'https://github.com/robingenz/engine4-python'
     },
     url="https://github.com/robingenz/engine4-python",
