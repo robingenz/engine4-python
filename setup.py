@@ -20,7 +20,6 @@ setup(
     license="MIT",
     python_requires='>=3.6',
     packages=['engine4'],
-    package_dir = {'engine4': 'src'},
     install_requires=["requests"],
     classifiers=[
         'Programming Language :: Python',
