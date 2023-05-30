@@ -1,5 +1,10 @@
 # engine4-python
 
+<!-- [![Build](https://img.shields.io/github/actions/workflow/status/robingenz/engine4-python/ci.yml?branch=main)](https://github.com/robingenz/engine4-python/actions?query=workflow%3A%22CI%22) -->
+[![License](https://img.shields.io/pypi/l/engine4)](https://github.com/robingenz/engine4-python/blob/main/LICENSE)
+[![PyPI (version)](https://img.shields.io/pypi/v/engine4)](https://pypi.org/project/engine4/)
+[![PyPI (downloads)](https://img.shields.io/pypi/dm/engine4)](https://pypi.org/project/engine4/)
+
 ⚙️ Python library for the ENGINE4 API.
 
 ## Installation
